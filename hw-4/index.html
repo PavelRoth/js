@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+      /*    задание - 1   
+        const color = prompt('Введите цвет', '');
+        
+        if (color == 'red') {
+        document.write("<div style='background-color: red;'>красный</div>");
+        }
+
+        else if(color == 'black') {
+        document.write("<div style='background-color: black; color: white;'>черный</div>");
+        }
+
+        else if(color == 'blue') {
+        document.write("<div style='background-color: blue;'>синий</div>");
+        }
+            
+        else if(color == 'green') {
+        document.write("<div style='background-color: green;'>зеленый</div>");
+        }
+
+        else {
+        document.write("<div style='background-color: gray;'>Я не понял</div>");
+        }  
+ */
+        /* задание - 2 */
+        /* let age = prompt('Сколько вам лет?', '');
+        if (age > 0 && age < 100) {
+            alert('ок;)')
+        } else {
+            console.log('Я что для тебя шутка какая-то???')
+        } */
+
+        /* задание - 3 */
+        /* let month = prompt('введите название месяца, pls', '')
+        switch (month) {
+            case 'jan': alert('31');break;
+            case 'fab': alert('28');break;
+            case 'march': alert('31');break;
+            case 'april': alert('30');break;
+            case 'may': alert('31');break;
+            case 'june': alert('30');break;
+            case 'july': alert('31');break;
+            case 'august': alert('30');break;
+            case 'sep': alert('31');break;
+            case 'oct': alert('30');break;
+            case 'nov': alert('31');break;
+            case 'dec': alert('30');break;
+            default:
+            alert( '??¿??' );
+        } */
+
+        /* задание - 4 
+        let age = prompt('Сколько вам лет?', '');
+        
+        if (age < 3) {alert('Здравствуй, малыш!');} 
+        else if (age < 18) {alert('Привет!');}
+        else if (age < 100) {alert('Здравствуйте!');} 
+        else {alert('Какой необычный возраст!');}
+         */
+
+         /* задание - 5 
+        let age = prompt('Сколько вам лет?', '');
+        
+        if (age < 3) {alert('Здравствуй, малыш!' + 'Классный с  егодня день!');} 
+        else if (age < 18) {alert('Привет!' + 'Классный сегодня день!');}
+        else if (age < 100) {alert('Здравствуйте!' + 'Классный сегодня день!');} 
+        else {alert('Какой необычный возраст!' + 'Классный сегодня день!');} */
+         
+        /* задание - 6 */
+        // initialize constants. Play with these.
+    var SIDES = 6;              // sides of die
+    var ROLLS = 1000000;        // trials to run
+// don't play with these though.
+    var ROLLX = ROLLS/SIDES;    // Expected count of rolls
+    var MEANX = (1+SIDES)/2;    // Expected mean roll
+
+// initialize the array to hold results of throws.
+    var count = [];
+    for ( i=1; i< SIDES+1; i++ ) count[i] = 0;
+
+// roll the die, counting how many times you see each value
+    var roll;
+    for ( i=0; i < ROLLS; i++) {
+        roll = Math.floor(Math.random()*SIDES + 1);
+        count[roll]++;
+    }
+
+// display results
+    console.log("Expected roll: "+(ROLLX).toFixed(SIDES));
+    var sum = 0;
+    for ( i=1; i <= SIDES; i++ ) {
+        console.log("A "+i+" was rolled "+count[i]+" times. Diff = "+((count[i]-ROLLS/SIDES).toFixed(2))+'.');
+        sum += i*count[i];
+    }
+    var mean = sum/ROLLS;
+    console.log("Expected mean is: "+((1+SIDES)/2)+'.');
+    console.log("Actual mean roll: "+ mean +". Diff = " + (mean-MEANX).toFixed(3) + '.');
+       /*  задание - 7 */
+
+        /* let notebook = {
+            brand: prompt('Введите название брэнда вашего ноута'),
+            type:  prompt('Какого типа ваш ноут?'),
+            model: prompt('Какой модели ваш ноут?'),
+            ram: prompt('Сколько планок озу на вашем ноуте?'),
+            size: prompt('Каков размер вашего ноута?'),
+            weight: prompt('Каков вес вашего ноута?'),
+            resolution: {
+            width: prompt('Какая ширина экрана в вашем ноуте?'),
+            height: prompt('Какая высота экрана в вашем ноуте?')
+            },
+            }; 
+
+        let phone = {
+            brand: prompt('Введите название брэнда вашего телефона'),
+            model: prompt('Введите название модели вашего телефона'),
+            ram: prompt('Сколько планок озу на вашем телефоне?'),
+            color: prompt('Какого цвета ваш телефон?'),
+            };
+
+        let person = {
+            name: prompt('Введите имя'),
+            surname: prompt('Введите фамилию'),
+            married: confirm('Этот человек состоит в браке?')
+            } 
+
+            console.log( notebook );
+            console.log( phone   );
+            console.log( person );   */
+
+        /*  задание - 8 
+
+        for (let i = confirm('да или отменить'); i != true; i = confirm('да или отменить')){
+            console.log(i);
+        } */
+
+         /* Задание - 9  
+
+        let n = prompt('Введите положительное число');
+
+        for (let i = 2; i <= n; i++) {
+        let flag = 1;
+        if (i > 2 && i % 2 != 0)
+        {
+        for (let j = 3; j*j <= i ; j=j+2)
+        {
+            if (i%j==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        }
+        else if (i != 2) flag = 0;
+        if (flag==1) {console.log(i);}
+        } */
+
+       /*  задание - 10 */
+
+
+            /* задание - 12
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            let arrOfIndexs = [];
+            arrOfIndexs = arr.map((item, index) => index * index * index);
+            console.log(arrOfIndexs)  */
+    </script>
+</body>
+</html>
