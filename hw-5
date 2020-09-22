@@ -8,7 +8,7 @@
 <body>
     <script>
         /* Битва за респект */
-        const arr = ['banan', 'ananas', 'strawberry', 'js', 'react']
+        const arr = ['banana', 'ananas', 'strawberry', 'js', 'react']
 
         function mySplice(array, start, count, insert) {
             if (typeof count === 'undefined') count = 1;
